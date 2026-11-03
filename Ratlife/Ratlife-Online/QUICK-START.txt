@@ -1,0 +1,24 @@
+RATLIFE ONLINE — START HERE
+
+The game stays at ratlife.vercel.app. Nothing has been deployed to your accounts.
+
+1. Read DEPLOYMENT.md. Put this whole folder in your game repository.
+2. Host the Node backend as one always-running web service with a persistent disk.
+   Build: npm --prefix server ci --omit=dev --ignore-scripts
+   Start: node server/src/index.js
+3. Backend variables:
+   ALLOWED_ORIGINS=https://ratlife.vercel.app
+   DATA_DIR=/var/data/ratlife   (must be on the persistent disk)
+   RAT_PACK_ACCESS_CODES=      (optional server-only codes from Bob)
+4. On the EXISTING Vercel project, build the frontend:
+   Install: npm --prefix frontend ci --ignore-scripts
+   Build: npm --prefix frontend run build
+   Output: frontend/dist
+5. Set the Vercel environment variable:
+   MULTIPLAYER_SERVER_URL=wss://YOUR-ACTUAL-BACKEND-HOST/ws
+6. Redeploy Vercel. Test with two devices. Detailed screenshots-free numbered
+   instructions, local Windows commands and troubleshooting are in DEPLOYMENT.md.
+
+Do not upload node_modules or .env. Do not put server secrets in frontend config.
+Do not change the website to the backend address. Rat Royale's future URL is empty.
+The provided prebuilt frontend has multiplayer unconfigured until you set the URL.

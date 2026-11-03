@@ -1,0 +1,1 @@
+{"name": "ratlife-complete-project", "private": true, "type": "module", "scripts": {"build": "python3 tools/integrate.py && npm --prefix frontend run build", "test": "npm --prefix server test"}}
