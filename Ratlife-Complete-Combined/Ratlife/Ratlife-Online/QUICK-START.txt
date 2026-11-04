@@ -1,0 +1,3 @@
+Complete combined package: start with START-HERE.txt, then docs/INSTALL-FIRST.md.
+All required original source files and game assets are included.
+Dependencies install with npm; frontend/dist is regenerated during the build.

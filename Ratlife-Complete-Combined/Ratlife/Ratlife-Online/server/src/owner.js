@@ -1,0 +1,5 @@
+// Private terminal-only administrator setup; there is no HTTP bootstrap endpoint.
+import {Storage,starter,secret,password,nickname} from './storage.js';
+import {randomUUID} from 'node:crypto';
+const store=new Storage({dataDir:process.env.DATA_DIR});
+try{const pw=password(process.env.BOBADMIN_PASSWORD);const recover=process.argv.includes('--recover');store.transaction(s=>{const existing=s.accounts.bobadmin;if(existing&&!recover)throw Error('BobAdmin already exists. Bootstrap is disabled. Owner recovery requires --recover.');const id=existing?.id||randomUUID();if(!existing)s.profiles[id]={...starter(id,nickname('Bob')),kind:'account',role:'admin'};s.accounts.bobadmin={id,username:'BobAdmin',password:secret(pw)};s.profiles[id].role='admin';for(const [key,v]of Object.entries(s.sessions))if(v.id===id)delete s.sessions[key];store.audit(s,recover?'admin-owner-recovery':'admin-bootstrap','server-owner',id)});console.log('BobAdmin configured. Remove BOBADMIN_PASSWORD from the environment immediately.')}finally{delete process.env.BOBADMIN_PASSWORD;store.close()}

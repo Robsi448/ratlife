@@ -1,0 +1,11 @@
+ALREADY REMOVED FROM THIS COMPLETE PACKAGE
+
+tools/integrate.py and tools/package.py were obsolete one-off generators.
+Do not retain them when replacing the old game folder.
+
+The mistaken nested Ratlife/Ratlife-Online/Ratlife-Online folder is not needed.
+Remove it only after the complete game is in Ratlife/Ratlife-Online.
+Keep the GitHub repository itself and the hosting project connections.
+
+Never delete DATA_DIR, SQLite/WAL files or migration markers as part of a source
+upload. Keep backend data and private recovery backups outside GitHub.

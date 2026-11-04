@@ -1,0 +1,21 @@
+COMPLETE COMBINED RATLIFE GAME
+
+This ZIP includes the original game plus the reviewed accounts/admin/chat update.
+Game assets, CSS, RatDeck, world.json and package files are included.
+
+1. Keep your existing GitHub repository. Back up its current files first.
+2. Extract this ZIP and open Ratlife/Ratlife-Online on your computer.
+3. In GitHub open the existing Ratlife/Ratlife-Online folder.
+4. Upload the CONTENTS of the extracted game folder, not another enclosing folder.
+   frontend, server, shared, tools and docs belong directly inside Ratlife-Online.
+5. Remove the mistaken nested Ratlife-Online folder after the replacement is present.
+
+Before deployment, read docs/INSTALL-FIRST.md.
+This version needs Node 24 and a paid Render service with a genuine persistent disk.
+No database credentials or actual administrator password are included.
+Set up BobAdmin privately using the instructions. Deploy Render, then Vercel.
+The fixed release reset runs once; its migration ID is unchanged.
+
+Local validation: 44 server tests, 4 client tests and 24 game checks passed; build passed.
+Physical mobile, rendered browser and live hosting remain unverified.
+Nothing was pushed or deployed.

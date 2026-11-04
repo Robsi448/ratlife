@@ -1,0 +1,9 @@
+{
+  "name": "ratlife-complete-project",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "npm --prefix frontend run build",
+    "test": "npm --prefix server test && node --test tools/client-tests.mjs tools/community-client-tests.mjs && node tools/base-regression.cjs"
+  }
+}
