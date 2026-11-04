@@ -1,9 +1,0 @@
-START HERE: docs/INSTALL-FIRST.md
-
-This reviewed ZIP is a replacement-file patch. Merge it into the existing game;
-keep unchanged source and assets. Follow the ordered guide for persistent disk,
-Render configuration, private BobAdmin setup, Vercel configuration and playtesting.
-
-44 server tests, 4 interface/RatDeck tests and 24 game checks pass; build passes.
-Rendered desktop/mobile and live deployment remain unverified.
-No changes were pushed or deployed.
