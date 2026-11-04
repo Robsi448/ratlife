@@ -1,0 +1,17 @@
+RETIRE THESE LEGACY BUILD HELPERS AFTER APPLYING THE UPDATE
+
+Ratlife/Ratlife-Online/tools/integrate.py
+Ratlife/Ratlife-Online/tools/package.py
+
+They were one-off generators for the older release. Running integrate.py would
+recreate obsolete runtime code. The updated root npm run build no longer calls it.
+The ZIP does not contain or execute these retired generators.
+
+No runtime files are renamed. Keep existing frontend/public/rat assets and the
+original source archive. frontend/src/game-base.js is an unused historic source
+snapshot; it is not copied into frontend/dist and must not replace game.js.
+
+Do not delete DATA_DIR, the SQLite database, its WAL files, identities, migration
+markers or private recovery backups during deployment. Follow the documented
+backup/retention procedure instead. Do not restore gameplay by deleting the
+release marker, as that would risk repeating reset logic.

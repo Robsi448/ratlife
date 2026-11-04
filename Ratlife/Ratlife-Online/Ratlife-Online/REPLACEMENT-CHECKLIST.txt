@@ -1,0 +1,45 @@
+RATLIFE REVIEWED REPLACEMENT FILES
+
+Merge these complete files into the existing matching folders. Preserve all other
+source files and assets. Start with docs/INSTALL-FIRST.md.
+
+REPLACE / ADD  Ratlife/Ratlife-Online/.gitignore
+REPLACE / ADD  Ratlife/Ratlife-Online/DELETE-RENAME.txt
+REPLACE / ADD  Ratlife/Ratlife-Online/DEPLOYMENT.md
+REPLACE / ADD  Ratlife/Ratlife-Online/QUICK-START.txt
+REPLACE / ADD  Ratlife/Ratlife-Online/README.md
+REPLACE / ADD  Ratlife/Ratlife-Online/REPLACEMENT-CHECKLIST.txt
+REPLACE / ADD  Ratlife/Ratlife-Online/TESTING.md
+REPLACE / ADD  Ratlife/Ratlife-Online/docs/ARCHITECTURE.md
+REPLACE / ADD  Ratlife/Ratlife-Online/docs/INSTALL-FIRST.md
+REPLACE / ADD  Ratlife/Ratlife-Online/docs/REVIEW-FIXES.md
+REPLACE / ADD  Ratlife/Ratlife-Online/docs/UPDATE-HANDOVER.md
+REPLACE / ADD  Ratlife/Ratlife-Online/frontend/.env.example
+REPLACE / ADD  Ratlife/Ratlife-Online/frontend/build.mjs
+REPLACE / ADD  Ratlife/Ratlife-Online/frontend/src/community.css
+REPLACE / ADD  Ratlife/Ratlife-Online/frontend/src/community.mjs
+REPLACE / ADD  Ratlife/Ratlife-Online/frontend/src/game.js
+REPLACE / ADD  Ratlife/Ratlife-Online/frontend/src/index.html
+REPLACE / ADD  Ratlife/Ratlife-Online/frontend/src/online.js
+REPLACE / ADD  Ratlife/Ratlife-Online/frontend/src/release.js
+REPLACE / ADD  Ratlife/Ratlife-Online/frontend/src/vehicles.mjs
+REPLACE / ADD  Ratlife/Ratlife-Online/package.json
+REPLACE / ADD  Ratlife/Ratlife-Online/server/.env.example
+REPLACE / ADD  Ratlife/Ratlife-Online/server/Dockerfile
+REPLACE / ADD  Ratlife/Ratlife-Online/server/migrations/README.md
+REPLACE / ADD  Ratlife/Ratlife-Online/server/package-lock.json
+REPLACE / ADD  Ratlife/Ratlife-Online/server/package.json
+REPLACE / ADD  Ratlife/Ratlife-Online/server/src/community.js
+REPLACE / ADD  Ratlife/Ratlife-Online/server/src/index.js
+REPLACE / ADD  Ratlife/Ratlife-Online/server/src/owner.js
+REPLACE / ADD  Ratlife/Ratlife-Online/server/src/storage.js
+REPLACE / ADD  Ratlife/Ratlife-Online/server/test/community.test.js
+REPLACE / ADD  Ratlife/Ratlife-Online/server/test/review.test.js
+REPLACE / ADD  Ratlife/Ratlife-Online/server/test/server.test.js
+REPLACE / ADD  Ratlife/Ratlife-Online/shared/simulation.mjs
+REPLACE / ADD  Ratlife/Ratlife-Online/tools/base-regression.cjs
+REPLACE / ADD  Ratlife/Ratlife-Online/tools/community-client-tests.mjs
+
+Read DELETE-RENAME.txt for retired generators.
+No node_modules, dist, private .env, database, player data or backups are included.
+Redeploy Render after configuring the genuine persistent disk, then rebuild Vercel.
